@@ -1,0 +1,35 @@
+---
+driver:
+  name: azurerm
+
+driver_config:
+  subscription_id: '9db13c96-62ad-4945-9579-74aeed296e48'
+  location: 'East US 2'
+  machine_size: 'Standard_A1'
+
+transport:
+  ssh_key: ~/.ssh/id_rsa
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-7.2
+    driver_config:
+      image_urn: OpenLogic:CentOS:7.2:latest
+      vnet_id: /subscriptions/9db13c96-62ad-4945-9579-74aeed296e48/resourceGroups/AZ-RG-Network/providers/Microsoft.Network/virtualNetworks/AZ-VN-EastUS2-01
+      subnet_id: AZ-SN-dvo
+      public_ip: true
+      vm_name: rac-adjoin
+      username: rcrawford
+      vm_tags:
+        requestor: 'Ray Crawford'
+        provisioner: 'Test Kitchen/Vagrant'
+suites:
+  - name: default
+    run_list:
+      - recipe[cb_dvo_osUpdate::default]
+    verifier:
+      inspec_tests:
+        - test/recipes
+    attributes:

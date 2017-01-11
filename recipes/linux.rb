@@ -5,5 +5,5 @@
 # Copyright (c) 2017 Trek Bicycles, All Rights Reserved.
 
 execute 'update' do
-  code 'yum update -y'
+  command 'yum update -y'
 end
