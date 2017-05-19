@@ -6,7 +6,7 @@ description 'Installs/Configures cb_dvo_osUpdate'
 long_description 'Installs/Configures cb_dvo_osUpdate'
 issues_url 'https://bitbucket.org/trekbikes/cb_dvo_adJoin/issues'
 source_url 'https://bitbucket.org/trekbikes/cb_dvo_adJoin/src'
-version '0.1.1'
+version '0.1.2'
 
 chef_version '~> 12'
 supports 'centos'
