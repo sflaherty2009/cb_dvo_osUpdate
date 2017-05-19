@@ -28,7 +28,7 @@ cron 'Patching' do
   action :create
   minute '0'
   hour '0'
-  day day_of_month
+  day #{day_of_month}
   user 'root'
   mailto 'devops@trekbikes.com'
   command 'yum update -y'
