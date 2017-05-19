@@ -6,7 +6,7 @@
 
 require 'date'
 
-day_of_month = Date.today
+day_of_month = Date.today.day
 
 cookbook_file '/etc/cron.monthly/yumUpdate.bash' do
   source '/etc/cron.monthly/yumUpdate.bash'
