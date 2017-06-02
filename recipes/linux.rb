@@ -18,8 +18,9 @@ cookbook_file '/etc/cron.monthly/yumUpdate.bash' do
 end
 
 # Guarded so it only runs the first time
+# See https://github.com/Azure/WALinuxAgent/issues/178 for explaination
 execute 'yum Update' do
-  command 'yum history new &&  yum update -y'
+  command 'yum update -y --exclude=WALinuxAgent'
   action :nothing
 end
 
