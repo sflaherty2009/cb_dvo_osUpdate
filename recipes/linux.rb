@@ -19,7 +19,7 @@ end
 
 # Guarded so it only runs the first time
 execute 'yum Update' do
-  command 'yum update new; yum update -y'
+  command 'yum update new &&  yum update -y'
   action :nothing
 end
 
