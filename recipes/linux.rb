@@ -31,6 +31,5 @@ cron 'Patching' do
   hour '0'
   day day_of_month
   user 'root'
-  mailto 'devops@trekbikes.com'
   command 'yum update -y'
 end

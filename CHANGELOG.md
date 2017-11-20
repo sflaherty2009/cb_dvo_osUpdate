@@ -1,3 +1,9 @@
+# 1.0.10
+**Date:** 11/20/2017
+**Change owner:** Ray Crawford
+
+Updated to remove mail-to from crontab entry.
+
 # 0.1.9
 **Date: 5/8/2017**
 

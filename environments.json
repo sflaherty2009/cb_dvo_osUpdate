@@ -1,5 +1,6 @@
 {
   "cb_dvo_osUpdate": {
-      "production":"0.1.9"
+      "production": "0.1.10",
+      "test": "0.1.10"
   }
 }
