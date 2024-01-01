@@ -2,7 +2,7 @@
 # Cookbook Name:: cb_dvo_osUpdate
 # Recipe:: default
 #
-# Copyright (c) 2017 Trek Bicycles, All Rights Reserved.
+# Copyright (c) 2017 Example, All Rights Reserved.
 
 include_recipe 'cb_dvo_osUpdate::default'
 
